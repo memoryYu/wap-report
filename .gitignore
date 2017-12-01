@@ -1,0 +1,15 @@
+node_modules
+.DS_Store
+*/**/.DS_Store
+assets/node_modules
+*/**/node_modules
+package-lock.json
+assets/package-lock.json
+*/**/package-lock.json
+../.idea/*
+../.idea/**
+.idea/**
+.idea/*
+assets/dist
+assets/dist/*/**
+assets/rev-manifest.json

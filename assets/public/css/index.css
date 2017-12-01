@@ -1,0 +1,490 @@
+.wh1200{
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.warp{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.warp .bannerBox{
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+}
+.warp .bannerBox .cent{
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.warp .bannerBox .slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 550px;
+    z-index: 1;
+    overflow: hidden;
+}
+.warp .bannerBox .slider ul,.warp .bannerBox .slider li{
+    display: block;
+    width: 100%;
+    height: 550px;
+}
+.warp .bannerBox .slider li,.warp .bannerBox .slider li a{
+    display: inline-block;
+    width: 100%;
+    height: 550px;
+}
+.warp .bannerBox .slider li{
+    background: url("../img/index/banner/banner_bg.png") top center no-repeat;
+}
+.warp .bannerBox .sliderBar{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+    height: 4px;
+}
+.warp .bannerBox .sliderBar li{
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    width: 50px;
+    height: 4px;
+    text-indent: -999px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #999;
+    opacity: .65;
+     *filter:alpha(opacity=65);
+}
+.warp .bannerBox .sliderBar li.on{
+    background: #fff;
+    opacity: 1;
+     *filter:alpha(opacity=100);
+}
+.warp .bannerBox .prev,.warp .bannerBox .next{
+    display: none;
+    width: 66px;
+    height: 80px;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    margin-top: -40px;
+}
+.warp .bannerBox .prev{
+    left: 0;
+    background: url("../img/index/banner/selected-left.png") top center no-repeat;
+}
+.warp .bannerBox .next{
+    right: 0;
+    background: url("../img/index/banner/selected-right.png") top center no-repeat;
+}
+.warp .bannerBox .prev:hover{
+    background: url("../img/index/banner/selected-no-left.png") top center no-repeat;
+}
+.warp .bannerBox .next:hover{
+    background: url("../img/index/banner/selected-no-right.png") top center no-repeat;
+}
+.warp .bannerBox .w1200{
+    width: 1200px;
+    height: 550px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 0;
+    margin-left: -600px;
+}
+.warp .bannerBox .w1200 .right{
+    float: right;
+    width: 240px;
+    height: 324px;
+    overflow: hidden;
+    margin-top: 113px;
+}
+.warp .bannerBox .w1200 .right i{
+    display: block;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.warp .bannerBox .w1200 .right .goRegister{
+    margin-top: 230px;
+}
+.warp .bannerBox .w1200 .right .goRegister a{
+    display: inline-block;
+    width: 172px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    background: #ff5e44;
+}
+.warp .bannerBox .w1200 .right .goRegister a:hover{
+    background: #ff5e66;
+}
+.warp .bannerBox .w1200 .right .goLogin{
+    line-height: 40px;
+    color: #9c9fa1;
+    font-size: 12px;
+}
+.warp .bannerBox .w1200 .right .goLogin a{
+    color: #2591f1;
+}
+
+.warp1{
+    width: 100%;
+    background: #fff;
+    padding: 20px 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.warp1 .item{
+    float: left;
+    width: 399px;
+    overflow: hidden;
+}
+.warp1 .border{
+    border-left: 1px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
+}
+.warp1 .item span,.warp1 .item strong{
+    display: block;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.warp1 .item strong{
+    font-size: 28px;
+    color: #ff5e44;
+    line-height: 30px;
+    margin-bottom: 10px;
+    
+}
+.warp1 .item span{
+    font-size: 14px;
+    color: #9c9fa1;
+    line-height: 16px;
+}
+
+.warp2{
+    width: 100%;
+    padding: 25px 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.warp2 .img,.warp2 .item,.warp2 .moreItem{
+    float: left;
+}
+.warp2 .img{
+    width: 97px;
+    height: 24px;
+    line-height: 24px;
+    background: url("../img/index/bulletin.png") top center no-repeat;
+}
+.warp2 .item {
+    width: 930px;
+    height: 24px;
+    overflow: hidden;
+    margin-left: 20px;
+}
+.warp2 .item li{
+    display: block;
+    float: left;
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+}
+.warp2 .item li a{
+    color: #616669;
+    font-size: 14px;
+}
+.warp2 .moreItem{
+    float: right;
+    padding-left: 30px;
+    border-left: 1px solid #8a8e91;
+    line-height: 24px;
+}
+.warp2 .moreItem a{
+    color: #8a8e91;
+    font-size: 14px;
+}
+
+.warp3{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.warp3 .item{
+    width: 100%;
+    height: 224px;
+    overflow: hidden;
+}
+.warp3 .item1{
+    margin-bottom: 40px;
+    background: url("../img/index/currentProducts1.png") top center no-repeat;
+}
+.warp3 .item2{
+    background: url("../img/index/currentProducts2.png") top center no-repeat;
+}
+.warp3 .item .left,.warp3 .item .right{
+    float: left;
+    height: 212px;
+    margin-top: 6px;
+    overflow: hidden;
+}
+.warp3 .item .left{
+    width: 290px;
+    color: #fff;
+}
+.warp3 .item .left span,.warp3 .item .left strong,.warp3 .item .left i{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.warp3 .item .left strong{
+    font-size: 36px;
+    height: 38px;
+    line-height: 38px;
+    margin-top: 76px;
+}
+.warp3 .item .left span{
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 35px;
+    opacity: .65;
+     *filter:alpha(opacity=65);
+}
+.warp3 .item .left i{
+    font-size: 14px;
+    height: 16px;
+    line-height: 16px;
+    opacity: .65;
+     *filter:alpha(opacity=65);
+}
+.warp3 .item .right{
+    width: 900px;
+    margin-left: 10px;
+}
+.warp3 .item .label,.warp3 .item .cent{
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+.warp3 .item .label{
+    padding: 5px 0;
+    height: 26px;
+}
+.warp3 .item .label span{
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+    width: 72px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    background: url("../img/index/icon-tip.png") top center no-repeat;
+    font-size: 12px;
+    color: #fff;
+}
+.warp3 .item .cent .text{
+    float: left;
+    width: 650px;
+    height: 176px;
+    overflow: hidden;
+}
+.warp3 .item .cent .text i{
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+}
+.warp3 .item .cent .text span,.warp3 .item .cent .text strong{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.warp3 .item .cent .text strong{
+    font-size: 28px;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+.warp3 .item .cent .text strong.fontRed{
+    color: #ff5e44;
+}
+.warp3 .item .cent .text strong b{
+    font-size: 14px;
+}
+
+.warp3 .item .cent .text span{
+    font-size: 14px;
+    height: 16px;
+    line-height: 16px;
+    color: #9c9fa1;
+}
+
+.warp3 .item1 .text1{
+    width: 210px;
+    margin-left: 50px;
+}
+.warp3 .item1 .text2{
+    width: 150px;
+}
+.warp3 .item1 .text3{
+    width: 210px;
+}
+.warp3 .item2 .text1{
+    width: 210px;
+}
+.warp3 .item2 .text2{
+    width: 100px;
+}
+.warp3 .item2 .text3{
+    width: 130px;
+}
+.warp3 .item2 .text4{
+    width: 210px;
+}
+.warp3 .item .cent .btn{
+    float: left;
+    width: 250px;
+    height: 176px;
+    line-height: 176px;
+    text-align: center;
+    overflow: hidden;
+}
+.warp3 .item .cent .btn a{
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    background: #2591f1;
+}
+.warp3 .item .cent .btn a:hover{
+    background: #1975c6;
+}
+
+.warp4{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.warp4 .title{
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+}
+.warp4 .title .left{
+    float: left;
+    font-size: 20px;
+    line-height: 80px;
+    color: #333;
+}
+.warp4 .title .right{
+    float: right;
+    font-size: 14px;
+    line-height: 80px;
+    color: #8a8e91;
+}
+
+.warp5{
+    width: 100%;
+    margin: 50px auto;
+    overflow: hidden;
+}
+.warp5 .item{
+    width: 100%;
+    background: #fff;
+    height: 210px;
+    overflow: hidden;
+}
+.warp5 .item i,.warp5 .item span,.warp5 .item strong{
+    display: inline-block;
+    float: left;
+    width: 72px;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+}
+.warp5 .item i{
+    margin-top: 45px;
+    margin-left: 170px;
+}
+.warp5 .item .item1{
+    margin-left: 75px;
+}
+.warp5 .item span{
+    width: 72px;
+    height: 72px;
+    margin-bottom: 30px;
+}
+.warp5 .item .item1 span{
+    background: url("../img/index/icon-1.png") top center no-repeat;
+}
+.warp5 .item .item2 span{
+    background: url("../img/index/icon-2.png") top center no-repeat;
+}
+.warp5 .item .item3 span{
+    background: url("../img/index/icon-3.png") top center no-repeat;
+}
+.warp5 .item .item4 span{
+    background: url("../img/index/icon-4.png") top center no-repeat;
+}
+.warp5 .item .item5 span{
+    background: url("../img/index/icon-5.png") top center no-repeat;
+}
+
+.warp6{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #fff;
+}
+.warp6 .title{
+    height: 100px;
+    line-height: 100px;
+    color: #333;
+    font-size: 20px;
+    text-align: center;
+}
+.warp6 .partner{
+    width: 100%;
+    height: 60px;
+    background: url("../img/index/partner.png") top center no-repeat;
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

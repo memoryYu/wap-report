@@ -1,0 +1,546 @@
+<div id="main" class="main">
+	<div class="header">
+		<div id="back" class="back"></div>
+		历史报表
+		<div id="choose" class="choose">筛选</div>
+	</div>
+	<div class="tip box box-h">
+		<div class="box box-center box-f3">
+			<p id="time">历史全部报表</p>
+		</div>
+		<div class="box box-center box-f1">
+			<p class="t-r">金额：万元</p>
+		</div>
+	</div>	
+
+	<div id="reportTable" class="reportTable hide">
+		<!-- <thead>
+			<tr>
+				<td class="head"></td>	
+				<td>2017/08/10</td>			
+				<td>2017/08/10</td>			
+				<td>2017/08/10</td>			
+				<td>2017/08/10</td>
+			</tr>
+		</thead>
+        <tbody>
+            <tr>
+                <td class="head">总存量</td>
+                <td>1111111</td>
+                <td>1111111</td>
+                <td>1111111</td>
+                <td>1111111</td>
+            </tr>
+        </tbody>     -->
+    </div>    
+    <div id="nothing" class="nothing">
+		<img src="img/common/nothing.png">
+		<p>暂无内容</p>
+	</div>
+    <textarea id="summaryDateTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].summaryDate%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="totalStockTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].totalStock%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="totalCapitalOnCallTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].totalCapitalOnCall%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="principalOnCallTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].principalOnCall%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="interestOnCallTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].interestOnCall%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="capitalOnCallPersonNumTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].capitalOnCallPersonNum%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="balanceAmountTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].balanceAmount%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="balancePersonNumTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].balancePersonNum%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="investUnconfirmedAmountTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].investUnconfirmedAmount%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="investUnconfirmedPersonNumTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].investUnconfirmedPersonNum%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="investConfirmedAmountTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].investConfirmedAmount%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="rechargeAmountTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].rechargeAmount%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="withdrawAmountTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].withdrawAmount%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="registeredPersonNumTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].registeredPersonNum%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="cardPersonNumTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].cardPersonNum%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="investPersonNumTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].investPersonNum%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="multipleInvestPersonNumTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].multipleInvestPersonNum%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="dailyInvestAmountTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].dailyInvestAmount%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="dailyInvestPersonNumTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].dailyInvestPersonNum%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="dailyMultipleInvestPersonNumTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].dailyMultipleInvestPersonNum%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="dailyRechargeAmountTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].dailyRechargeAmount%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="dailyWithdrawAmountTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].dailyWithdrawAmount%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="dailyRegisteredPersonNumTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].dailyRegisteredPersonNum%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="dailyCardPersonNumTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].dailyCardPersonNum%></div>	
+		<%
+			}
+		%>
+    </textarea>
+
+    <textarea id="reportTableTMP" class="hide">
+    	<div class="head-left">
+    		<div></div>
+    		<div>总存量</div>
+    		<div>总待还</div>
+    		<div>待还本金</div>
+    		<div>待还利息</div>
+    		<div>投资中人数</div>
+    		<div>账户站岗资金</div>
+    		<div>账户站岗人数</div>
+			<div>募集中站岗资金</div>
+			<div>募集中站岗人数</div>
+			<div>累计投资交易额</div>
+			<div>累计充值额</div>
+			<div>累计提现额</div>
+			<div>累计注册人数</div>
+			<div>累计绑卡人数</div>
+			<div>累计投资人数</div>
+			<div>累计复投人数</div>
+			<div>当日投资交易额</div>
+			<div>当日投资人数</div>
+			<div>当日复投人数</div>
+			<div>当日充值额</div>
+			<div>当日提现额</div>
+			<div>当日注册人数</div>
+			<div>当日绑卡人数</div>
+    	</div>
+        <div id="tbody" class="tbody" >
+        	<div id="summaryDate" class="thead tr">
+				<div class="td head"></div>	
+				<%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].summaryDate%></div>	
+				<%
+					}
+				%>
+			</div>
+            <div id="totalStock" class="tr">
+                <div class="td head">总存量</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].totalStock%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="totalCapitalOnCall" class="tr">
+                <div class="td head">总待还</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].totalCapitalOnCall%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="principalOnCall" class="tr">
+                <div class="td head">待还本金</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].principalOnCall%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="interestOnCall"  class="tr">
+                <div class="td head">待还利息</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].interestOnCall%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="capitalOnCallPersonNum" class="tr">
+                <div class="td head">投资中人数</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].capitalOnCallPersonNum%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="balanceAmount" class="tr">
+                <div class="td head">账户站岗资金</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].balanceAmount%></div>	
+				<%
+					}
+				%>
+            </div>
+			<div id="balancePersonNum" class="tr">
+                <div class="td head">账户站岗人数</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].balancePersonNum%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="investUnconfirmedAmount" class="tr">
+                <div class="td head">募集中站岗资金</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].investUnconfirmedAmount%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="investUnconfirmedPersonNum" class="tr">
+                <div class="td head">募集中站岗人数</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].investUnconfirmedPersonNum%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="investConfirmedAmount" class="tr">
+                <div class="td head">累计投资交易额</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].investConfirmedAmount%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="rechargeAmount" class="tr">
+                <div class="td head">累计充值额</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].rechargeAmount%></div>	
+				<%
+					}
+				%>
+            </div>
+
+            <div id="withdrawAmount" class="tr">
+                <div class="td head">累计提现额</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].withdrawAmount%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="registeredPersonNum" class="tr">
+                <div class="td head">累计注册人数</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].registeredPersonNum%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="cardPersonNum" class="tr">
+                <div class="td head">累计绑卡人数</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].cardPersonNum%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="investPersonNum" class="tr">
+                <div class="td head">累计投资人数</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].investPersonNum%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="multipleInvestPersonNum" class="tr">
+                <div class="td head">累计复投人数</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].multipleInvestPersonNum%></div>	
+				<%
+					}
+				%>
+            </div>
+
+            <div id="dailyInvestAmount" class="tr">
+                <div class="td head">当日投资交易额</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].dailyInvestAmount%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="dailyInvestPersonNum" class="tr">
+                <div class="td head">当日投资人数</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].dailyInvestPersonNum%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="dailyMultipleInvestPersonNum" class="tr">
+                <div class="td head">当日复投人数</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].dailyMultipleInvestPersonNum%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="dailyRechargeAmount" class="tr">
+                <div class="td head">当日充值额</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].dailyRechargeAmount%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="dailyWithdrawAmount" class="tr">
+                <div class="td head">当日提现额</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].dailyWithdrawAmount%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="dailyRegisteredPersonNum" class="tr">
+                <div class="td head">当日注册人数</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].dailyRegisteredPersonNum%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="dailyCardPersonNum" class="tr">
+                <div class="td head">当日绑卡人数</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].dailyCardPersonNum%></div>	
+				<%
+					}
+				%>
+            </div>
+        </div>   
+    </textarea>
+
+	<div id="inputPop" class="m-pop box box-center hide">
+		<div class="inputBox">
+			<div class="title">选择时间</div>
+			<input type="text" class="start" id="start" placeholder="请选择开始时间">
+			<p class="to">至</p>
+			<input type="text" class="end" id="end" placeholder="请选择结束时间">
+			<div class="btns box box-h">
+				<div id="cancel" class="box box-center box-f1">
+					<span>取消</span>
+				</div>
+				<div id="sure" class="box box-center box-f1">
+					<span>确定</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

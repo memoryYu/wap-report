@@ -1,0 +1,161 @@
+<div class="warp">
+    <div class="bannerBox">
+        <div class="slideBox">
+            <div class="cent">
+                <div class="slider bd" id="Slider">
+                    <ul>
+                        <%dataList.sysFileList && dataList.sysFileList.forEach(function(item){%>
+                        <li><a href=<%= item.link || 'javascript:void(0)'%> target="_blank" style="background: url(<%= item.url%>) top center no-repeat;"></a></li>
+                        <%});%>
+                    </ul>
+                </div>
+                <div class="w1200">
+                    <div class="right" style="background: url(<%= dataList.titleUrl || 'img/index/banner/banner-right-text.png'%>) top center no-repeat;">
+                        <i class="goRegister"><a href=<%= dataList.titleLink || 'javascript:void(0);'%>><%= dataList.title || '注册送好礼'%></a></i>
+                        <%if(dataList && dataList.isLogin == 0){%>
+                        <i class="goLogin"><span>已有账号？</span><a href="<%= H.requestPath('/user/login') %>">立即登录</a></i>
+                        <%}%>
+                    </div>
+                </div>
+                <div class="sliderBar hd" id="SliderBar">
+                    <ul></ul>
+                </div>
+                <a class="prev" href="javascript:void(0)"></a>
+                <a class="next" href="javascript:void(0)"></a>
+            </div>
+        </div>
+    </div>
+    <div class="warp2">
+        <div class="wh1200">
+            <div class="img"></div>
+            <div class="item">
+                <ul>
+                     <%dataList.activityAndNoticeList && dataList.activityAndNoticeList.forEach(function(item){%>
+                        <li>
+                            <a href=<%='noticedetail?id=' + item.id%>><%- item.title%></a>
+                        </li>
+                        <%});%>
+                </ul>
+            </div>
+            <div class="moreItem">
+                <a href="#">查看更多</a>
+            </div>
+        </div>
+    </div>
+    <div class="warp3">
+        <div class="wh1200">
+            <%if(dataList.investCurproList.length > 0){%>
+                <% var item = dataList.investCurproList[0];%>
+            <div class="item item1">
+                <div class="left">
+                    <strong>快活宝</strong>
+                    <span><%= item.proName%></span>
+                    <i>灵活赎回</i>
+                </div>
+                <div class="right">
+                    <div class="label">
+                        <%item.icons && item.icons.forEach(function(icon){%>
+                        <span><%= icon%></span>
+                        <%});%>
+                    </div>
+                    <div class="cent">
+                        <div class="text">
+                            <i class="text1">
+                                <strong class="fontRed"><%=item.sevenRate || (item.expArorStart + '~' + item.expArorEnd) %>%</strong>
+                                <span>七日年化收益</span>
+                            </i>
+                            <i class="text2">
+                                <strong><%= item.minAmount %>元</strong>
+                                <span>起投金额</span>
+                            </i>
+                            <i class="text3">
+                                <strong><%= item.tenThousandRate ? item.tenThousandRate + '元' : '/' %></strong>
+                                <span>万份收益</span>
+                            </i>
+                        </div>
+                        <div class="btn">
+                            <a href="#">立即申购</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%}%>
+            <%if(dataList.newBid.length > 0){%>
+                <% var item = dataList.newBid[0];%>
+            <div class="item item2">
+                <div class="left">
+                    <strong>新手专享</strong>
+                    <span><%= item.proName%></span>
+                    <i>新手专享</i>
+                </div>
+                <div class="right">
+                    <div class="label">
+                        <%item.icons && item.icons.forEach(function(icon){%>
+                        <span><%= icon%></span>
+                        <%});%>
+                    </div>
+                    <div class="cent">
+                        <div class="text">
+                            <i class="itemText1">
+                                <strong class="fontRed"><%= item.basicApr + '%'%><b><%= item.givenApr > 0 ? '+' + item.givenApr + '%' : ''%></b></strong>
+                                <span>历史化收益率<%= item.givenApr > 0 ? '+平台奖励' : ''%></span>
+                            </i>
+                            <i class="text2">
+                                <strong><%= parseInt(item.direc)%>天</strong>
+                                <span>投资期限</span>
+                            </i>
+                            <i class="text3">
+                                <strong><%= H.toThousands(item.investMin)%>元</strong>
+                                <span>起投金额</span>
+                            </i>
+                            <i class="text4">
+                                <strong><%= H.toThousands(item.invAmt)%>元</strong>
+                                <span>剩余可投(<%= 100 - item.invRate%>%)</span>
+                            </i>
+                        </div>
+                        <div class="btn">
+                            <a href="#">立即申购</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <%}%>
+        </div>
+    </div>
+    <%if(dataList.fixedBid.length > 0){%>
+    <div class="warp4">
+        <div class="wh1200">
+            <div class="title">
+                <div class="left">
+                    <strong>定期产品</strong>
+                </div>
+                <div class="right">
+                    <a href="#">查看更多</a>
+                </div>
+            </div>
+            <%- include('common/products.html')%>
+        </div>
+    </div>
+    <%}%>
+    <div class="warp5">
+        <div class="wh1200">
+            <div class="item">
+                <i class="item1"><span></span><strong>国资控股</strong></i>
+                <i class="item2"><span></span><strong>资产优质</strong></i>
+                <i class="item3"><span></span><strong>多重保障</strong></i>
+                <i class="item4"><span></span><strong>分散风险</strong></i>
+                <i class="item5"><span></span><strong>自动复投</strong></i>
+            </div>
+        </div>
+    </div>
+    <div class="warp6">
+        <div class="wh1200">
+            <div class="title">
+                <strong>合作伙伴</strong>
+            </div>
+            <div class="partner"></div>
+        </div>
+    </div>
+</div>
+<%- include('common/right.html')%>
+<%- include('common/box.html')%>

@@ -1,0 +1,331 @@
+<div id="main" class="main">
+	<div class="header">
+		<div id="menu" class="menu">菜单</div>
+		<ul id="menuList" class="menuList hide">
+			<li id="currentReport">首页</li>
+			<li id="returnReport">定期回款统计</li>
+			<li id="reinvestReport">定期复投统计</li>
+			<li id="channelReport">平台渠道统计</li>
+		</ul>
+		定期复投统计
+		<div id="choose" class="choose">筛选</div>
+	</div>
+	<div class="tip box box-h">
+		<div class="box box-center box-f3">
+			<p id="time">更新时间：</p>
+		</div>
+	</div>	
+
+	<div id="reportTable" class="reportTable">
+		<div class="head-left">
+    		<div class="bf2">日期</div>
+    		<div>渠道</div>
+    		<div>当日总存量</div>
+    		<div>投资资金</div>
+    		<div>首投金额</div>
+    		<div>复投金额</div>
+			<div>注册人数</div>
+			<div>投资人数</div>
+			<div>投资笔数</div>
+			<div>人均投资金额</div>
+			<div>人均投资笔数</div>
+			<div>复投率(笔数)</div>
+			<div>复投金额占比</div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+    	</div>
+    	<div id="tbody" class="tbody" >
+			<!-- <ul class="dateList">
+				<li class="date">2017/08/15</li>
+				<li class="clearfix">
+					<div class="f-l">渠道用户</div>
+					<div class="f-l">自然用户</div>
+					<div class="f-l">小计</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+			</ul> -->
+    	</div>
+    </div>    
+    <div id="nothing" class="nothing hide">
+		<img src="img/common/nothing.png">
+		<p>暂无内容</p>
+	</div>
+
+    <textarea id="reportTableTMP" class="hide">
+    	<div class="head-left">
+    		<div class="bf2">日期</div>
+    		<div>渠道</div>
+    		<div>当日总存量</div>
+    		<div>投资资金</div>
+    		<div>首投金额</div>
+    		<div>复投金额</div>
+			<div>注册人数</div>
+			<div>投资人数</div>
+			<div>投资笔数</div>
+			<div>人均投资金额</div>
+			<div>人均投资笔数</div>
+			<div>复投率(笔数)</div>
+			<div>复投金额占比</div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+    	</div>
+        <div id="tbody" class="tbody" >
+        <%
+			for(var i=0;i<data.length;i++){
+        %>
+        	<ul class="dateList">
+				<li class="date"><%=data[i].summaryDate%></li>
+				<li class="clearfix">
+					<div class="f-l">渠道用户</div>
+					<div class="f-l">自然用户</div>
+					<div class="f-l">小计</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l"><%=data[i].totalAmountChannel%></div>
+					<div class="f-l"><%=data[i].totalAmount%></div>
+					<div class="f-l"><%=data[i].totalAmountSubtotal%></div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l"><%=data[i].channelInvestAmount%></div>
+					<div class="f-l"><%=data[i].investAmount%></div>
+					<div class="f-l"><%=data[i].investAmountSubtotal%></div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l"><%=data[i].channelFirstInvestAmount%></div>
+					<div class="f-l"><%=data[i].firstInvestAmount%></div>
+					<div class="f-l"><%=data[i].firstInvestAmountSubtotal%></div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l"><%=data[i].channelMultipleInvestAmount%></div>
+					<div class="f-l"><%=data[i].multipleInvestAmount%></div>
+					<div class="f-l"><%=data[i].multipleInvestAmountSubtotal%></div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l"><%=data[i].channelRegisteredNum%></div>
+					<div class="f-l"><%=data[i].registeredNum%></div>
+					<div class="f-l"><%=data[i].registeredNumSubtotal%></div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l"><%=data[i].channelInvestPersonNum%></div>
+					<div class="f-l"><%=data[i].investPersonNum%></div>
+					<div class="f-l"><%=data[i].investPersonNumSubtotal%></div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l"><%=data[i].channelInvestTenderNum%></div>
+					<div class="f-l"><%=data[i].investTenderNum%></div>
+					<div class="f-l"><%=data[i].investTenderNumSubtotal%></div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l"><%=data[i].averageAmountChannel%></div>
+					<div class="f-l"><%=data[i].averageAmount%></div>
+					<div class="f-l"><%=data[i].averageAmountSubtotal%></div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l"><%=data[i].averageTenderNumChannel%></div>
+					<div class="f-l"><%=data[i].averageTenderNum%></div>
+					<div class="f-l"><%=data[i].averageTenderNumSubtotal%></div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l"><%=data[i].multipleInvestRateChannel%></div>
+					<div class="f-l"><%=data[i].multipleInvestRate%></div>
+					<div class="f-l"><%=data[i].multipleInvestRateSubtotal%></div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l"><%=data[i].multipleInvestAmountRateChannel%></div>
+					<div class="f-l"><%=data[i].multipleInvestAmountRate%></div>
+					<div class="f-l"><%=data[i].multipleInvestAmountRateSubtotal%></div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l"></div>
+					<div class="f-l"></div>
+					<div class="f-l"></div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l"></div>
+					<div class="f-l"></div>
+					<div class="f-l"></div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l"></div>
+					<div class="f-l"></div>
+					<div class="f-l"></div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l"></div>
+					<div class="f-l"></div>
+					<div class="f-l"></div>
+				</li>
+			</ul>
+		<%
+			}
+		%>	
+        </div>   
+    </textarea>
+
+	<textarea id="addTMP" class="hide">
+	<%
+		for(var i=0;i<data.length;i++){
+    %>
+    	<ul class="dateList">
+			<li class="date"><%=data[i].summaryDate%></li>
+			<li class="clearfix">
+				<div class="f-l">渠道用户</div>
+				<div class="f-l">自然用户</div>
+				<div class="f-l">小计</div>
+			</li>
+			<li class="clearfix">
+				<div class="f-l"><%=data[i].totalAmountChannel%></div>
+				<div class="f-l"><%=data[i].totalAmount%></div>
+				<div class="f-l"><%=data[i].totalAmountSubtotal%></div>
+			</li>
+			<li class="clearfix">
+				<div class="f-l"><%=data[i].channelInvestAmount%></div>
+				<div class="f-l"><%=data[i].investAmount%></div>
+				<div class="f-l"><%=data[i].investAmountSubtotal%></div>
+			</li>
+			<li class="clearfix">
+				<div class="f-l"><%=data[i].channelFirstInvestAmount%></div>
+				<div class="f-l"><%=data[i].firstInvestAmount%></div>
+				<div class="f-l"><%=data[i].firstInvestAmountSubtotal%></div>
+			</li>
+			<li class="clearfix">
+				<div class="f-l"><%=data[i].channelMultipleInvestAmount%></div>
+				<div class="f-l"><%=data[i].multipleInvestAmount%></div>
+				<div class="f-l"><%=data[i].multipleInvestAmountSubtotal%></div>
+			</li>
+			<li class="clearfix">
+				<div class="f-l"><%=data[i].channelRegisteredNum%></div>
+				<div class="f-l"><%=data[i].registeredNum%></div>
+				<div class="f-l"><%=data[i].registeredNumSubtotal%></div>
+			</li>
+			<li class="clearfix">
+				<div class="f-l"><%=data[i].channelInvestPersonNum%></div>
+				<div class="f-l"><%=data[i].investPersonNum%></div>
+				<div class="f-l"><%=data[i].investPersonNumSubtotal%></div>
+			</li>
+			<li class="clearfix">
+				<div class="f-l"><%=data[i].channelInvestTenderNum%></div>
+				<div class="f-l"><%=data[i].investTenderNum%></div>
+				<div class="f-l"><%=data[i].investTenderNumSubtotal%></div>
+			</li>
+			<li class="clearfix">
+				<div class="f-l"><%=data[i].averageAmountChannel%></div>
+				<div class="f-l"><%=data[i].averageAmount%></div>
+				<div class="f-l"><%=data[i].averageAmountSubtotal%></div>
+			</li>
+			<li class="clearfix">
+				<div class="f-l"><%=data[i].averageTenderNumChannel%></div>
+				<div class="f-l"><%=data[i].averageTenderNum%></div>
+				<div class="f-l"><%=data[i].averageTenderNumSubtotal%></div>
+			</li>
+			<li class="clearfix">
+				<div class="f-l"><%=data[i].multipleInvestRateChannel%></div>
+				<div class="f-l"><%=data[i].multipleInvestRate%></div>
+				<div class="f-l"><%=data[i].multipleInvestRateSubtotal%></div>
+			</li>
+			<li class="clearfix">
+				<div class="f-l"><%=data[i].multipleInvestAmountRateChannel%></div>
+				<div class="f-l"><%=data[i].multipleInvestAmountRate%></div>
+				<div class="f-l"><%=data[i].multipleInvestAmountRateSubtotal%></div>
+			</li>
+			<li class="clearfix">
+				<div class="f-l"></div>
+				<div class="f-l"></div>
+				<div class="f-l"></div>
+			</li>
+			<li class="clearfix">
+				<div class="f-l"></div>
+				<div class="f-l"></div>
+				<div class="f-l"></div>
+			</li>
+			<li class="clearfix">
+				<div class="f-l"></div>
+				<div class="f-l"></div>
+				<div class="f-l"></div>
+			</li>
+			<li class="clearfix">
+				<div class="f-l"></div>
+				<div class="f-l"></div>
+				<div class="f-l"></div>
+			</li>	
+		</ul>
+	<%
+		}
+	%>	
+	</textarea>
+
+	<div id="inputPop" class="m-pop box box-center hide">
+		<div class="inputBox">
+			<div class="title">选择时间</div>
+			<input type="text" class="start" id="start" placeholder="请选择开始时间">
+			<p class="to">至</p>
+			<input type="text" class="end" id="end" placeholder="请选择结束时间">
+			<div class="btns box box-h">
+				<div id="cancel" class="box box-center box-f1">
+					<span>取消</span>
+				</div>
+				<div id="sure" class="box box-center box-f1">
+					<span>确定</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

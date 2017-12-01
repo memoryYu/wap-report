@@ -1,0 +1,75 @@
+@import "common/function";
+.main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .header{
+    	width:100%;
+    	position:relative;
+    	height:pxToRem(80);
+    	background:#fff;
+    	line-height:pxToRem(80);
+    	font-size:pxToRem(30);
+    	color:#333;
+    	text-align:center;
+    	border-bottom:1px solid #e2e2e2;
+    }
+    .logo{
+    	width:100%;
+    	background:#fff;
+    	padding-top:pxToRem(72);
+    	padding-bottom:pxToRem(70);
+    	margin-bottom:pxToRem(30);
+    	img{
+    		display:block;
+    		width:pxToRem(122);
+    		height:pxToRem(122);
+    		margin:0 auto pxToRem(18);
+    	}
+    	p{
+    		font-size:pxToRem(26);
+    		color:#333;
+    		text-align:center;
+    	}
+    }
+    .tel{
+        border-bottom:1px solid #f0f4f8;
+    }
+    .tel,.code{
+    	position:relative;
+    	width:100%;
+    	background:#fff;
+    	input{
+    		width:74%;
+    		height:pxToRem(90);
+    		/* line-height:pxToRem(90); */
+    		padding:pxToRem(30) pxToRem(25);
+    		color:#333;
+    		font-size:pxToRem(30);
+    		
+    	}
+    	.getcode{
+    		position:absolute;
+    		width:pxToRem(195);
+    		height:pxToRem(30);
+    		line-height:pxToRem(30);
+    		border-left:1px solid #f0f4f8;
+    		font-size:pxToRem(30);
+    		color:#1a8eeb;
+    		text-align:center;
+    		right:0;
+    		top:50%;
+    		margin-top:pxToRem(-15);
+    	}
+    }
+    .login{
+    	width:pxToRem(690);
+    	height:pxToRem(100);
+    	line-height:pxToRem(100);
+    	background:#1a8eeb;
+    	font-size:pxToRem(28);
+    	color:#fff;
+    	text-align:center;
+		margin:pxToRem(60) auto 0;
+    }
+}

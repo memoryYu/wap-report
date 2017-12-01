@@ -1,0 +1,365 @@
+<div id="main" class="main">
+	<div class="header">
+		<div id="menu" class="menu">菜单</div>
+		<ul id="menuList" class="menuList hide">
+			<li id="currentReport">首页</li>
+			<li id="returnReport">定期回款统计</li>
+			<li id="reinvestReport">定期复投统计</li>
+			<li id="channelReport">平台渠道统计</li>
+		</ul>
+		定期回款统计
+		<div id="choose" class="choose">筛选</div>
+	</div>
+	<div class="tip box box-h">
+		<div class="box box-center box-f3">
+			<p id="time">更新时间：</p>
+		</div>
+		<!-- <div class="box box-center box-f1">
+			<p class="t-r">金额：万元</p>
+		</div> -->
+	</div>	
+
+	<div id="reportTable" class="reportTable hide">
+		<!-- <thead>
+			<tr>
+				<td class="head"></td>	
+				<td>2017/08/10</td>			
+				<td>2017/08/10</td>			
+				<td>2017/08/10</td>			
+				<td>2017/08/10</td>
+			</tr>
+		</thead>
+        <tbody>
+            <tr>
+                <td class="head">总存量</td>
+                <td>1111111</td>
+                <td>1111111</td>
+                <td>1111111</td>
+                <td>1111111</td>
+            </tr>
+        </tbody>     -->
+    </div>    
+    <div id="nothing" class="nothing">
+		<img src="img/common/nothing.png">
+		<p>暂无内容</p>
+	</div>
+    <textarea id="summaryDateTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].summaryDate%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="totalAmountTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].totalAmount%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="totalAmountNotUsedTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].totalAmountNotUsed%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="investUnconfirmedAmountTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].investUnconfirmedAmount%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="totalRepaidAmountTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].totalRepaidAmount%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="annualizedRateTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].annualizedRate%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="oneWeekRepayAmountTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].oneWeekRepayAmount%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="halfMonthRepayAmountTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].halfMonthRepayAmount%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="oneMonthRepayAmountTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].oneMonthRepayAmount%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="fortyFiveDaysRepayAmountTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].fortyFiveDaysRepayAmount%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="twoMonthRepayAmountTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"><%=data[i].twoMonthRepayAmount%></div>	
+		<%
+			}
+		%>
+    </textarea>
+    <textarea id="nullTMP" class="hide">
+    	<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<div class="td"></div>	
+		<%
+			}
+		%>
+    </textarea>
+
+    <textarea id="reportTableTMP" class="hide">
+    	<div class="head-left">
+    		<div>日期</div>
+    		<div>当日总存量</div>
+    		<div>站岗资金</div>
+    		<div>在投资金(未满标)</div>
+			<div>当日回款金额</div>
+			<div>当日综合年化利率</div>
+			<div>7日内回款金额</div>
+			<div>15日内回款金额</div>
+			<div>30日内回款金额</div>
+			<div>45日内回款金额</div>
+			<div>60日内回款金额</div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+    	</div>
+        <div id="tbody" class="tbody" >
+        	<div id="summaryDate" class="thead tr">
+				<div class="td head">日期</div>	
+				<%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].summaryDate%></div>	
+				<%
+					}
+				%>
+			</div>
+            <div id="totalAmount" class="tr">
+                <div class="td head">当日总存量</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].totalAmount%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="totalAmountNotUsed" class="tr">
+                <div class="td head">站岗资金</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].totalAmountNotUsed%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="investUnconfirmedAmount" class="tr">
+                <div class="td head">在投资金(未满标)</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].investUnconfirmedAmount%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="totalRepaidAmount"  class="tr">
+                <div class="td head">当日回款金额</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].totalRepaidAmount%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="annualizedRate" class="tr">
+                <div class="td head">当日综合年化利率</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].annualizedRate%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="oneWeekRepayAmount" class="tr">
+                <div class="td head">7日内回款金额</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].oneWeekRepayAmount%></div>	
+				<%
+					}
+				%>
+            </div>
+			<div id="halfMonthRepayAmount" class="tr">
+                <div class="td head">15日内回款金额</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].halfMonthRepayAmount%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="oneMonthRepayAmount" class="tr">
+                <div class="td head">30日内回款金额</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].oneMonthRepayAmount%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="fortyFiveDaysRepayAmount" class="tr">
+                <div class="td head">45日内回款金额</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].fortyFiveDaysRepayAmount%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="twoMonthRepayAmount" class="tr">
+                <div class="td head">60日内回款金额</div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"><%=data[i].twoMonthRepayAmount%></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="null1" class="tr">
+                <div class="td head"></div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="null2" class="tr">
+                <div class="td head"></div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="null3" class="tr">
+                <div class="td head"></div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="null4" class="tr">
+                <div class="td head"></div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="null5" class="tr">
+                <div class="td head"></div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"></div>	
+				<%
+					}
+				%>
+            </div>
+            <div id="null6" class="tr">
+                <div class="td head"></div>
+                <%
+					for(var i=0;i<data.length;i++){
+				%>
+					<div class="td"></div>	
+				<%
+					}
+				%>
+            </div>
+        </div>   
+    </textarea>
+
+	<div id="inputPop" class="m-pop box box-center hide">
+		<div class="inputBox">
+			<div class="title">选择时间</div>
+			<input type="text" class="start" id="start" placeholder="请选择开始时间">
+			<p class="to">至</p>
+			<input type="text" class="end" id="end" placeholder="请选择结束时间">
+			<div class="btns box box-h">
+				<div id="cancel" class="box box-center box-f1">
+					<span>取消</span>
+				</div>
+				<div id="sure" class="box box-center box-f1">
+					<span>确定</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

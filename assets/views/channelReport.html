@@ -1,0 +1,521 @@
+<div id="main" class="main">
+	<div class="header">
+		<div id="menu" class="menu">菜单</div>
+		<ul id="menuList" class="menuList hide">
+			<li id="currentReport">首页</li>
+			<li id="returnReport">定期回款统计</li>
+			<li id="reinvestReport">定期复投统计</li>
+			<li id="channelReport">平台渠道统计</li>
+		</ul>
+		平台渠道统计
+		<div id="chooseAll" class="choose">筛选</div>
+	</div>
+	<div class="tip box box-h">
+		<div class="box box-center box-f3">
+			<p id="time">更新时间：</p>
+		</div>
+	</div>	
+
+	<div id="reportTable" class="reportTable">
+		<div class="head-left">
+    		<div class="bf2">日期</div>
+    		<div>渠道</div>
+    		<div>注册人数</div>
+    		<div>绑卡人数</div>
+    		<div>充值总金额</div>
+    		<div>投资总金额</div>
+			<div>首投总金额</div>
+			<div>复投总金额</div>
+			<div>提现总金额</div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+    	</div>
+    	<div id="tbody" class="tbody" >
+			<!-- <ul class="dateList">
+				<li class="date">2017/08/15</li>
+				<li class="clearfix">
+					<div class="f-l">渠道用户</div>
+					<div class="f-l">自然用户</div>
+					<div class="f-l">小计</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+				<li class="clearfix">
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+					<div class="f-l">1233241231</div>
+				</li>
+			</ul> -->
+    	</div>
+    </div>    
+    <div id="nothing" class="nothing">
+		<img src="img/common/nothing.png">
+		<p>暂无内容</p>
+	</div>
+
+    <textarea id="reportTableTMP" class="hide">
+    	<div class="head-left">
+    		<div class="bf2">日期</div>
+    		<div>渠道</div>
+    		<div>注册人数</div>
+    		<div>绑卡人数</div>
+    		<div>充值总金额</div>
+    		<div>投资总金额</div>
+			<div>首投总金额</div>
+			<div>复投总金额</div>
+			<div>提现总金额</div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+    	</div>
+        <div id="tbody" class="tbody" >
+	        <ul class="totalList">
+	        	<li>累计汇总</li>
+	        	<li>全部渠道</li>
+	        	<li><%=data.dataTotalList[0].dailyRegPersonNum%></li>
+	        	<li><%=data.dataTotalList[0].dailyCardPersonNum%></li>
+	        	<li><%=data.dataTotalList[0].dailyRechangeAmount%></li>
+	        	<li><%=data.dataTotalList[0].dailyInvestAmount%></li>
+	        	<li><%=data.dataTotalList[0].dailyFirstInvestAmount%></li>
+	        	<li><%=data.dataTotalList[0].dailyMultInvestAmount%></li>
+	        	<li><%=data.dataTotalList[0].dailyWithdrawAmount%></li>
+	        	<li></li>
+	        	<li></li>
+	        	<li></li>
+	        	<li></li>
+	        	<li></li>
+	        	<li></li>
+	        	<li></li>
+	        	<li></li>
+	        </ul>
+        <%
+			for(var key in data.dataList){
+        %>
+        	<ul class="dateList">
+				<li class="date" style="width:<%=data.dataList[key].length*2.4+'rem'%>"><%=key%></li>
+				<li class="clearfix">
+				<%
+					for(var i=0;i<data.dataList[key].length;i++){
+				%>			
+					<div class="f-l"><%=data.dataList[key][i].channelName%></div>
+				<%
+					}
+				%>	
+				</li>
+				<li class="clearfix">
+				<%
+					for(var i=0;i<data.dataList[key].length;i++){
+				%>			
+					<div class="f-l"><%=data.dataList[key][i].dailyRegPersonNum%></div>
+				<%
+					}
+				%>	
+				</li>
+				<li class="clearfix">
+				<%
+					for(var i=0;i<data.dataList[key].length;i++){
+				%>			
+					<div class="f-l"><%=data.dataList[key][i].dailyCardPersonNum%></div>
+				<%
+					}
+				%>		
+				</li>
+				<li class="clearfix">
+				<%
+					for(var i=0;i<data.dataList[key].length;i++){
+				%>			
+					<div class="f-l"><%=data.dataList[key][i].dailyRechangeAmount%></div>
+				<%
+					}
+				%>		
+				</li>
+				<li class="clearfix">
+				<%
+					for(var i=0;i<data.dataList[key].length;i++){
+				%>			
+					<div class="f-l"><%=data.dataList[key][i].dailyInvestAmount%></div>
+				<%
+					}
+				%>		
+				</li>
+				<li class="clearfix">
+				<%
+					for(var i=0;i<data.dataList[key].length;i++){
+				%>			
+					<div class="f-l"><%=data.dataList[key][i].dailyFirstInvestAmount%></div>
+				<%
+					}
+				%>		
+				</li>
+				<li class="clearfix">
+				<%
+					for(var i=0;i<data.dataList[key].length;i++){
+				%>			
+					<div class="f-l"><%=data.dataList[key][i].dailyMultInvestAmount%></div>
+				<%
+					}
+				%>
+				</li>
+				<li class="clearfix">
+				<%
+					for(var i=0;i<data.dataList[key].length;i++){
+				%>			
+					<div class="f-l"><%=data.dataList[key][i].dailyWithdrawAmount%></div>
+				<%
+					}
+				%>
+				</li>
+				<li class="clearfix">
+				<%
+					for(var i=0;i<data.dataList[key].length;i++){
+				%>			
+					<div class="f-l"></div>
+				<%
+					}
+				%>	
+				</li>
+				<li class="clearfix">
+				<%
+					for(var i=0;i<data.dataList[key].length;i++){
+				%>			
+					<div class="f-l"></div>
+				<%
+					}
+				%>	
+				</li>
+				<li class="clearfix">
+				<%
+					for(var i=0;i<data.dataList[key].length;i++){
+				%>			
+					<div class="f-l"></div>
+				<%
+					}
+				%>	
+				</li>
+				<li class="clearfix">
+				<%
+					for(var i=0;i<data.dataList[key].length;i++){
+				%>			
+					<div class="f-l"></div>
+				<%
+					}
+				%>	
+				</li>
+				<li class="clearfix">
+				<%
+					for(var i=0;i<data.dataList[key].length;i++){
+				%>			
+					<div class="f-l"></div>
+				<%
+					}
+				%>	
+				</li>
+				<li class="clearfix">
+				<%
+					for(var i=0;i<data.dataList[key].length;i++){
+				%>			
+					<div class="f-l"></div>
+				<%
+					}
+				%>	
+				</li>
+				<li class="clearfix">
+				<%
+					for(var i=0;i<data.dataList[key].length;i++){
+				%>			
+					<div class="f-l"></div>
+				<%
+					}
+				%>	
+				</li>
+				<li class="clearfix">
+				<%
+					for(var i=0;i<data.dataList[key].length;i++){
+				%>			
+					<div class="f-l"></div>
+				<%
+					}
+				%>	
+				</li>	
+			</ul>
+		<%
+			}
+		%>	
+        </div>   
+    </textarea>
+
+	<textarea id="addTMP" class="hide">
+	<%
+		for(var key in data.dataList){
+    %>
+    	<ul class="dateList">
+			<li class="date" style="width:<%=data.dataList[key].length*2.4+'rem'%>"><%=key%></li>
+			<li class="clearfix">
+			<%
+				for(var i=0;i<data.dataList[key].length;i++){
+			%>			
+				<div class="f-l"><%=data.dataList[key][i].channelName%></div>
+			<%
+				}
+			%>	
+			</li>
+			<li class="clearfix">
+			<%
+				for(var i=0;i<data.dataList[key].length;i++){
+			%>			
+				<div class="f-l"><%=data.dataList[key][i].dailyRegPersonNum%></div>
+			<%
+				}
+			%>	
+			</li>
+			<li class="clearfix">
+			<%
+				for(var i=0;i<data.dataList[key].length;i++){
+			%>			
+				<div class="f-l"><%=data.dataList[key][i].dailyCardPersonNum%></div>
+			<%
+				}
+			%>		
+			</li>
+			<li class="clearfix">
+			<%
+				for(var i=0;i<data.dataList[key].length;i++){
+			%>			
+				<div class="f-l"><%=data.dataList[key][i].dailyRechangeAmount%></div>
+			<%
+				}
+			%>		
+			</li>
+			<li class="clearfix">
+			<%
+				for(var i=0;i<data.dataList[key].length;i++){
+			%>			
+				<div class="f-l"><%=data.dataList[key][i].dailyInvestAmount%></div>
+			<%
+				}
+			%>		
+			</li>
+			<li class="clearfix">
+			<%
+				for(var i=0;i<data.dataList[key].length;i++){
+			%>			
+				<div class="f-l"><%=data.dataList[key][i].dailyFirstInvestAmount%></div>
+			<%
+				}
+			%>		
+			</li>
+			<li class="clearfix">
+			<%
+				for(var i=0;i<data.dataList[key].length;i++){
+			%>			
+				<div class="f-l"><%=data.dataList[key][i].dailyMultInvestAmount%></div>
+			<%
+				}
+			%>
+			</li>
+			<li class="clearfix">
+			<%
+				for(var i=0;i<data.dataList[key].length;i++){
+			%>			
+				<div class="f-l"><%=data.dataList[key][i].dailyWithdrawAmount%></div>
+			<%
+				}
+			%>
+			</li>
+			<li class="clearfix">
+			<%
+				for(var i=0;i<data.dataList[key].length;i++){
+			%>			
+				<div class="f-l"></div>
+			<%
+				}
+			%>	
+			</li>
+			<li class="clearfix">
+			<%
+				for(var i=0;i<data.dataList[key].length;i++){
+			%>			
+				<div class="f-l"></div>
+			<%
+				}
+			%>	
+			</li>
+			<li class="clearfix">
+			<%
+				for(var i=0;i<data.dataList[key].length;i++){
+			%>			
+				<div class="f-l"></div>
+			<%
+				}
+			%>	
+			</li>
+			<li class="clearfix">
+			<%
+				for(var i=0;i<data.dataList[key].length;i++){
+			%>			
+				<div class="f-l"></div>
+			<%
+				}
+			%>	
+			</li>
+			<li class="clearfix">
+			<%
+				for(var i=0;i<data.dataList[key].length;i++){
+			%>			
+				<div class="f-l"></div>
+			<%
+				}
+			%>	
+			</li>
+			<li class="clearfix">
+			<%
+				for(var i=0;i<data.dataList[key].length;i++){
+			%>			
+				<div class="f-l"></div>
+			<%
+				}
+			%>	
+			</li>
+			<li class="clearfix">
+			<%
+				for(var i=0;i<data.dataList[key].length;i++){
+			%>			
+				<div class="f-l"></div>
+			<%
+				}
+			%>	
+			</li>
+			<li class="clearfix">
+			<%
+				for(var i=0;i<data.dataList[key].length;i++){
+			%>			
+				<div class="f-l"></div>
+			<%
+				}
+			%>	
+			</li>	
+		</ul>
+	<%
+		}
+	%>	
+	</textarea>
+
+	<div id="inputPop" class="m-pop box box-center hide">
+		<div class="inputBox">
+			<div class="title">选择时间</div>
+			<input type="text" class="start" id="start" placeholder="请选择开始时间">
+			<p class="to">至</p>
+			<input type="text" class="end" id="end" placeholder="请选择结束时间">
+			<div class="btns box box-h">
+				<div id="cancel" class="box box-center box-f1">
+					<span>取消</span>
+				</div>
+				<div id="sure" class="box box-center box-f1">
+					<span>确定</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="channelPop" class="channelPop hide">
+		<div class="title">
+			<div id="back" class="back"></div>
+			筛选
+		</div>
+		<div class="chooseDate box box-center box-h">
+			<div class="box box-f1 t-l">日期筛选</div>
+			<div id="choose" class="box box-f2 t-r box-h-r"><p id="time2">全部</p><span></span></div>
+		</div>
+		<ul id="channelList" class="channelList">
+			<!-- <li>渠道选择</li>
+			<li data-channel="IOS">IOS<span></span></li>
+			<li data-channel="360">360<span></span></li>
+			<li data-channel="小米">小米<span></span></li>
+			<li data-channel="应用宝">应用宝<span></span></li>
+			<li data-channel="安智">安智<span></span></li>
+			<li data-channel="华为">华为<span></span></li>
+			<li data-channel="魅族">魅族<span></span></li>
+			<li data-channel="VIVO">VIVO<span></span></li>
+			<li data-channel="OPPO">OPPO<span></span></li>
+			<li data-channel="PC">PC<span></span></li>
+			<li data-channel="WAP">WAP<span></span></li> -->
+		</ul>
+		<textarea id="channelListTMP" class="hide">
+			<li>渠道选择</li>
+			<%
+				for(var i=0;i<data.length;i++){
+			%>
+			<li class="active" data-channel="<%=data[i].channelName%>"><%=data[i].channelName%><span></span></li>
+			<%
+				}
+			%>
+		</textarea>
+		<div class="btns box box-center box-h">
+			<div class="box box-f1 box-center">
+				<div id="qr" class="btn">确认</div>
+			</div>
+			<div class="box box-f1 box-center">
+				<div id="cz" class="btn">重置</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,40 @@
+<div id="Products">
+    <% dataList && dataList.fixedBid && dataList.fixedBid.forEach(function(item){%>
+    <div class="item">
+        <div class="itemlabel">
+            <strong><%= item.proName%></strong>
+            <% if(item.proMark == '0'){%>
+            <span class="on">新手专享</span>
+            <% }%>
+            <%item.icons && item.icons.forEach(function(icon){%>
+            <span><%= icon%></span>
+            <%})%>
+        </div>
+        <div class="itemText">
+                <i class="itemText1">
+                    <strong><%= item.basicApr + '%'%><b><%= item.givenApr > 0 ? '+' + item.givenApr + '%' : ''%></b></strong>
+                    <span>历史化收益率<%= item.givenApr > 0 ? '+平台奖励' : ''%></span>
+                </i>
+                <i class="itemText2 itemTextShare">
+                    <strong><%= parseInt(item.direc)%>天</strong>
+                    <span>投资期限</span>
+                </i>
+                <i class="itemText3 itemTextShare">
+                    <strong><%= H.toThousands(item.investMin)%></strong>
+                    <span>起投金额</span>
+                </i>
+                <i class="itemText4 itemTextShare">
+                    <strong><%= H.toThousands(item.invAmt)%>元</strong>
+                    <span>剩余可投</span>
+                </i>
+                <i class="itemText5">
+                    <strong><p style="width:<%= item.invRate%>%"></p></strong>
+                    <span>投资进度：<%= item.invRate%>%</span>
+                </i>
+            </div>
+        <div class="btn">
+            <a href="<%= H.requestPath('/regular/buy') %>">立即购买</a>
+        </div>
+    </div>
+    <%})%>
+</div>

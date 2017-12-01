@@ -1,0 +1,307 @@
+<div class="main">
+	<div class="header">
+		<div id="menu" class="menu">菜单</div>
+		<ul id="menuList" class="menuList hide">
+			<li id="currentReport">首页</li>
+			<li id="returnReport">定期回款统计</li>
+			<li id="reinvestReport">定期复投统计</li>
+			<li id="channelReport">平台渠道统计</li>
+		</ul>		
+		业务数据统计报表
+		<div id="logout" class="logout">退出</div>
+	</div>
+	<div class="tip box box-h">
+		<div class="box box-center box-f3">
+			<p>更新时间：<span id="time">2017-08-15 10:30</span></p>
+		</div>
+		<div class="box box-center box-f1">
+			<p class="t-r">金额：万元</p>
+		</div>
+	</div>	
+	<div id="container" class="scroller" >
+		<!-- <div class="loading">
+		   下拉刷新数据
+		</div>		 -->
+		<ul id="reportList" class="reportList hide">
+			<!-- <li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>总存量</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r">9,218.58</p>
+				</div>
+			</li> -->
+		</ul>
+		<textarea id="reportListTMP" class="hide">
+		<%
+			for(var i=0;i<data.length;i++){
+		%>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>总存量</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].totalStock%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>较月初新增</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r <%=((data[i].newAddTotalStock).indexOf('-')>-1)?'red':'green'%>"><%=data[i].newAddTotalStock%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>总待还</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].totalCapitalOnCall%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>较月初新增</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r <%=((data[i].newAddTotalCapitalOnCall).indexOf('-')>-1)?'red':'green'%>"><%=data[i].newAddTotalCapitalOnCall%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>待还本金</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].principalOnCall%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>待还利息</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].interestOnCall%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>账户站岗资金</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].balanceAmount%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>募集中站岗资金</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].investUnconfirmedAmount%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>累计投资交易额</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].investConfirmedAmount%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>累计投资总利息</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].investInterestTime%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>已还款利息</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].investInterestTimeRepaid%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>待还款利息</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].investInterestTimeUnrepay%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>逾期利息</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].investInterestTimeOverdue%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>累计充值额</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].rechargeAmount%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>累计提现额</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].withdrawAmount%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>累计注册人数</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].registeredPersonNum%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>累计绑卡人数</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].cardPersonNum%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>累计投资人数</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].investPersonNum%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>累计复投人数</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].multipleInvestPersonNum%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>注册/绑卡转化率</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].cardTakeRate%>%</p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>绑卡/投资转化率</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].investTakeRate%>%</p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>投资/复投转化率</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].multipleInvestTakeRate%>%</p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>新用户投资总额</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].noviceInvestTotalAmount%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>新用户首投总额</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].noviceFirstInvestTotalAmount%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>新用户复投总额</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].noviceReinvestTotalAmount%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>当日投资交易额</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].dailyInvestAmount%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>当日投资人数</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].dailyInvestPersonNum%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>当日复投人数</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].dailyMultipleInvestPersonNum%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>当日充值额</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].dailyRechargeAmount%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>当日提现额</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].dailyWithdrawAmount%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>当日注册人数</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].dailyRegisteredPersonNum%></p>
+				</div>
+			</li>
+			<li class="box box-h">
+				<div class="box box-center box-f1">
+					<p>当日绑卡人数</p>
+				</div>
+				<div class="box box-center box-f1">
+					<p class="t-r"><%=data[i].dailyCardPersonNum%></p>
+				</div>
+			</li>
+		<%
+			}
+		%>	
+		</textarea>
+		<div id="nothing" class="nothing">
+			<img src="img/common/nothing.png">
+			<p>暂无内容</p>
+		</div>
+	</div>
+	<div class="bottom box box-center">
+		<div id="historyData" class="historyData">历史数据</div>
+	</div>
+</div>

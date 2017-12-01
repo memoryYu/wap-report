@@ -1,0 +1,252 @@
+/*
+    公共
+*/
+#Box_Fix{
+    display: none;
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .65;
+     *filter:alpha(opacity=65);
+}
+.Box{
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+}
+
+/*
+*   收益计算器
+*/
+.Global_tool_bar {
+    margin: -250px 0 0 -350px;
+    width: 700px;
+    height: 500px;
+    background: #fff;
+    overflow: hidden;
+}
+.Global_tool_bar .title{
+    width: 100%;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+}
+.Global_tool_bar .title strong,.Global_tool_bar .title a{
+    display: block;
+    position: absolute;
+    top: 0;
+}
+.Global_tool_bar .title strong{
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+}
+.Global_tool_bar .title a{
+    z-index: 2;
+    right: 30px;
+    top:30px;
+    width: 18px;
+    height: 18px;
+    background: url("../../../img/common/close.png") top center no-repeat;
+}
+.Global_tool_bar .center,.Global_tool_bar .center .item{
+    width: 100%;
+    overflow: hidden;
+}
+.Global_tool_bar .center .item{
+    margin-bottom: 25px;
+    float: left;
+}
+.Global_tool_bar .center .item i,.Global_tool_bar .center .item b,.Global_tool_bar .center .item input,.Global_tool_bar .center .item span{
+    display: inline-block;
+    float: left;
+}
+.Global_tool_bar .center .item span{
+    font-size: 16px;
+    color: #333;
+    line-height: 60px;
+    width: 190px;
+    text-align: right;
+    margin-right: 10px;
+}
+.Global_tool_bar .center .item i{
+    border: 1px solid #e2e2e2;
+    width: 300px;
+    height: 58px;
+}
+.Global_tool_bar .center .item input{
+    width: 240px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #333;
+    border: 0 none;
+    margin-top: 14px;
+    margin-left: 10px;
+}
+.Global_tool_bar .center .item b{
+    color: #999;
+    font-size: 14px;
+    line-height: 58px;
+    float: right;
+    margin-right: 10px
+
+}
+.Global_tool_bar .calculation{
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    margin-top: 20px;
+}
+.Global_tool_bar .calculation span,.Global_tool_bar .calculation strong{
+    float: left;
+    line-height: 28px;
+}
+.Global_tool_bar .calculation span{
+    color: #333;
+    font-size: 16px;
+    margin-left: 200px;
+}
+.Global_tool_bar .calculation strong{
+    color: #ff5e44;
+    font-size: 24px;
+}
+.Global_tool_bar .btn{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
+    float: left;
+}
+.Global_tool_bar .btn a{
+    display: inline-block;
+    float: left;
+    background: #2591f1;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+}
+.Global_tool_bar .btn a:hover{
+    background: #1975c6;
+}
+.Global_tool_bar .btn .btnSet{
+    margin-left: 200px;
+}
+.Global_tool_bar .btn .btnGet{
+    margin-left: 20px;
+}
+
+
+
+
+/*
+*   协议弹框 【定向委托投资管理说明书】【定向委托投资管理协议】【产品认购风险揭示书】【产品交易提示及免责声明】
+*/
+.Box_protocol{
+    margin: -286px 0 0 -600px;
+    width: 1200px;
+    height: 572px;
+    overflow: hidden;
+    background: #fff;
+}
+.Box_protocol .Box_protocol_title{
+    width: 100%;
+    height: 70px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e2e2e2;
+}
+.Box_protocol .Box_protocol_title span,.Box_protocol .Box_protocol_title a{
+    display: block;
+    position: absolute;
+}
+.Box_protocol .Box_protocol_title span{
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 18px;
+    color: #394042;
+}
+.Box_protocol .Box_protocol_title a{
+    top: 26px;
+    right: 20px;
+    z-index: 2;
+    width: 18px;
+    height: 18px;
+    background: url("../../img/common/close.png") top center no-repeat;
+}
+.Box_protocol .Box_protocol_cent{
+    width: 1140px;
+    height: 400px;
+    overflow-y: scroll;
+    padding: 30px 30px;
+    color: #5d6265;
+}
+.Box_protocol .Box_protocol_cent p,.Box_protocol .Box_protocol_cent strong{
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    color: #5d6265;
+    overflow: hidden;
+}
+.Box_protocol .Box_protocol_cent strong{
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+.Box_protocol .Box_protocol_cent p{
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+.Box_protocol .Box_protocol_cent .text_align_right{
+    text-align: right;
+}
+.Box_protocol .Box_protocol_cent .text_align_center{
+    text-align: center;
+}
+.Box_protocol .Box_protocol_cent .float_left{
+    float: left;
+}
+.Box_protocol .Box_protocol_cent .float_right{
+    float: right;
+}
+.Box_protocol .Box_protocol_cent .width_200{
+    display: inline-block;
+    width: 200px;
+}
+.Box_protocol .Box_protocol_cent table{
+    border-collapse: collapse;
+    width: 100%;
+    line-height: 38px;
+    text-align: left;
+}
+.Box_protocol .Box_protocol_cent table td{
+    border: 1px solid #e2e2e2;
+    width: 25%;
+    padding: 0 20px;
+}
+.Box_protocol .Box_protocol_cent table th{
+    border: 1px solid #e2e2e2;
+    padding: 0 20px;
+}
+

@@ -1,0 +1,16 @@
+apps:
+  - name : "wap_server"
+    script : "bin/www"
+    watch : true
+    log_file : "../pm2Log/huadi_pc.log"
+    error_file : "../pm2Log/huadi_pc_err.log"
+    out_file : "../pm2Log/huadi_pc_out.log"
+    pid_file : "../pm2Log/huadi_pc.pid"
+#   instances : 2
+    exec_mode : "fork"
+    env    :
+      NODE_ENV: development
+    env_production:
+      NODE_ENV: production
+    max_memory_restart : "4G"
+    log_date_format : "YYYY-MM-DD HH:mm:SS"

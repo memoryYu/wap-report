@@ -1,0 +1,186 @@
+#Products{
+    width: 1200px;
+    overflow: hidden;
+}
+#Products .item{
+    width: 1080px;
+    padding: 0 60px;
+    overflow: hidden;
+    background: #fff;
+    margin-bottom: 2px;
+    height: 210px;
+}
+#Products .itemlabel{
+    width: 100%;
+    float: left;
+    margin: 20px 0;
+    height: 28px;
+    overflow: hidden;
+}
+#Products .itemlabel strong,#Products .itemlabel span{
+    display: inline-block;
+    float: left;
+    margin-left: 20px;
+}
+#Products .itemlabel strong{
+    font-size: 16px;
+    line-height: 26px;
+}
+#Products .itemlabel span.on{
+    color: #fff;
+    background: #ff5e44;
+}
+#Products .itemlabel span{
+    height: 26px;
+    line-height: 26px;
+    padding: 0 15px;
+    border: 1px solid #ff5e44;
+    color: #ff5e44;
+    font-size: 14px;
+}
+#Products .itemText{
+    float: left;
+    width: 920px;
+    height: 90px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+#Products .itemText i{
+    display: inline-block;
+    float: left;
+}
+#Products .itemText i.itemText1{
+    width: 200px;
+}
+#Products .itemText i.itemText2{
+    width: 120px;
+    margin-left: 20px;
+}
+#Products .itemText i.itemText3{
+    width: 120px;
+    margin-left: 10px;
+    nav-right: 10px;
+}
+#Products .itemText i.itemText4{
+    width: 200px;
+    margin-right: 20px;
+}
+#Products .itemText i.itemText5{
+    width: 200px;
+}
+#Products .itemText .itemTextShare strong,#Products .itemText .itemTextShare span{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+#Products .itemText .itemTextShare strong{
+    font-size: 28px;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    margin-bottom: 10px
+}
+#Products .itemText .itemTextShare span{
+    font-size: 14px;
+    height: 16px;
+    line-height: 16px;
+    color: #9c9fa1;
+}
+#Products .itemText .itemText1 strong,#Products .itemText .itemText1 span{
+    display: block;
+    width: 100%;
+}
+
+#Products .itemText .itemText1 strong{
+    font-size: 28px;
+    height: 30px;
+    line-height: 30px;
+    color: #ff5e44;
+    margin-bottom: 10px;
+}
+#Products .itemText .itemText1 strong b{
+    font-size: 14px;
+}
+#Products .itemText .itemText1 span{
+    font-size: 14px;
+    height: 16px;
+    line-height: 16px;
+    color: #9c9fa1;
+}
+#Products .itemText .itemText5 strong,#Products .itemText5 .itemText5 span{
+    display: block;
+    width: 100%;
+}
+#Products .itemText .itemText5 strong{
+    height: 8px;
+    border-radius: 20px;
+    background: #e4ebf5;
+    margin: 11px 0 21px;
+    overflow: hidden;
+}
+#Products .itemText .itemText5 strong p{
+    display: block;
+    float: left;
+    width: 10%;
+    background: #2591f1;
+    height: 8px;
+}
+#Products .itemText .itemText5 span{
+    display: block;
+    width: 100%;
+    height: 16px;
+    line-height: 16px;
+    font-size: 14px;
+    color: #9c9fa1;
+    text-align: center;
+}
+#Products .btn{
+    float: left;
+    width: 120px;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 40px;
+}
+#Products .btn a,#Products .btn span{
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+}
+#Products .btn a{
+    color: #fff;
+    background: #2591f1;
+}
+#Products .btn a:hover{
+    background: #1975c6;
+}
+
+
+
+#Products .itemEnd .btn span{
+    color: #778792;
+    background: #e4ebf5;
+}
+#Products .itemEnd .itemText .itemText1 strong,
+#Products .itemEnd .itemText .itemText1 span,
+#Products .itemEnd .itemText .itemTextShare strong,
+#Products .itemEnd .itemText .itemTextShare span,
+#Products .itemEnd .itemlabel strong,
+#Products .itemEnd .itemlabel span
+{
+    color: #aab2bc;
+}
+#Products .itemEnd .itemlabel span{
+    border: 1px solid #aab2bc;
+}
+#Products .itemEnd .itemText .itemText5 strong p{
+    width: 0;
+}
+
+
+
+

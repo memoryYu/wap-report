@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+        <meta name="author" content="yingbeijf.com"/>
+        <meta name="viewport" content="width=device-width, initial-scale=0.1"/>
+        <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <link rel="shortcut icon" href="https://www.yingbeijf.com/favicon.ico" type="image/x-icon"/>
+        <link href="/css/common/basic.css" type="text/css" rel="stylesheet"/>
+        <link href="/css/common/header.css" type="text/css" rel="stylesheet"/>
+        <% if(keywords){%>
+            <%- keywords%>
+            <%- description%>
+        <%}%>
+        <title><%=title%></title>
+        <% stylesheets && stylesheets.forEach(function(stylesheet){%>
+            <%- stylesheet%> 
+        <%})%>
+    </head>
+    <body>
+        <%- include('common/header.html') %>
+        <%- include(body) %>
+        <%- include('common/footer.html') %>
+        <script src="/lib/jquery.js"></script>
+        <script src="/js/common/header.js"></script>
+        <% scripts && scripts.forEach(function(script){ %>
+            <%- script %> 
+        <% }) %>
+    </body>
+</html>  
